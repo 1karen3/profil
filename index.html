@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const year = prompt("Сколько вам лет?");
+        const city = prompt("В каком городе вы живете?");
+        const FavoritSport = prompt("Какой ваш любимый вид спорта?");
+        let userYear = new Date().getFullYear()
+        let age;
+        let sport;
+
+        if(isNaN(year) || year ===''){
+            age ="Почему вы не ввели возраст?"
+        }else if (year == null){
+            age = "Почему вы не ввели возраст?"
+        }else{
+            age = userYear - year
+        }
+
+        switch(FavoritSport){
+            case "Football":
+                sport = "Круто! Хочешь стать как Рональдо?"
+                break;
+            case "Basketball":
+                sport = "Круто! Хочешь стать как Леброн Джеймс?"
+                break;
+            case "":
+                sport = "Почему не выбрал вид спорта?"
+                break;
+            case null:
+                sport = "Почему не выбрал вид спорта?"
+                break;
+            default:
+                sport="Круто! Это интересный спорт"
+        }
+
+        switch(city){
+            case "Kiev":
+                alert("Ты родился в:"+ age + "\n" + "Ты живешь в столице" + city + "\n" + sport)
+                break;
+            case "London":
+                alert("Твой возраст:"+ age + "\n" + "Ты живешь в столице" + city + "\n" + sport)
+                break;
+            case "Washington":
+                alert("Твой возраст:"+ age + "\n" + "Ты живешь в столице" + city + "\n" + sport)
+                break;
+            case "":
+                alert("Твой возраст:"+ age + "\n" + "Почему вы не выграли город?" + "\n" + sport)
+                break;
+            case null:
+                alert("Твой возраст:"+ age + "\n" + "Почему вы не выграли город?" + "\n" + sport)
+                break;
+            default:
+                alert("Твой возраст:"+ age + "\n" + "Ты живешь в городе" + city + "\n" + sport)
+        }
+
+    
+
+    </script>
+</body>
+</html>
